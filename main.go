@@ -2,8 +2,8 @@ package main
 
 import (
 	_ "time"
-	_ "cloud-api-go/amazon/monitor"
-	"cloud-api-go/amazon/resources"
+	_ "github.com/HarveyJie/cloud-api-go/amazon/monitor"
+	"github.com/HarveyJie/cloud-api-go/amazon/resources"
 )
 
 func main()  {
