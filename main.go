@@ -1,9 +1,8 @@
 package main
 
 import (
-	_ "time"
 	_ "github.com/HarveyJie/cloud-api-go/amazon/monitor"
-	"github.com/HarveyJie/cloud-api-go/amazon/resources"
+	_ "time"
 )
 
 func main()  {
@@ -15,6 +14,5 @@ func main()  {
 
 	 */
 
-	resources.Test()
 
 }
