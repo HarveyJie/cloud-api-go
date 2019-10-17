@@ -11,7 +11,7 @@ func rdsFilerNameComm(startTime time.Time,endTime time.Time,dbName string,metric
 	rdsInput := &cloudwatch.GetMetricStatisticsInput{
 		MetricName: aws.String(metricName),
 		Namespace:  aws.String("AWS/RDS"),
-		Period:     aws.Int64(300),
+		Period:     aws.Int64(60),
 		EndTime:    aws.Time(startTime),
 		StartTime:  aws.Time(endTime),
 		Statistics: []*string{aws.String("Average")},
