@@ -1,16 +1,16 @@
 package main
 
-import "github.com/HarveyJie/cloud-api-go/amazon/resources"
-
+import (
+	"github.com/HarveyJie/cloud-api-go/amazon/monitor"
+	"time"
+)
 func main()  {
-/*
+
+    monitor.InitCloudWatchClient("cn-north-1")
+
 	now:=time.Now()
 	later :=now.Add(-time.Minute)
-	res ,_:=monitor.RdsConnFilterDBName(now,later,"accountdb01")
-    fmt.Println(res)
-
- */
-     resources.ListRedis()
+	monitor.RdsConnFilterDBName(now,later,"accountdb01")
 
 
 }
