@@ -7,9 +7,9 @@ import (
 	"github.com/aws/aws-sdk-go/aws/session"
 )
 
-func ListRDS() ( *rds.DescribeDBInstancesOutput, error) {
+func ListRDS(region string) ( *rds.DescribeDBInstancesOutput, error) {
 	sess := session.Must(session.NewSession())
-	svc :=rds.New(sess,&aws.Config{Region: aws.String("cn-north-1")})
+	svc :=rds.New(sess,&aws.Config{Region: aws.String(region)})
 	result,err:=svc.DescribeDBInstances(&rds.DescribeDBInstancesInput{})
 	if err !=nil{
 		fmt.Println(err)
