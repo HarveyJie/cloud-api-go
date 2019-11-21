@@ -64,3 +64,7 @@ func RdsReadLatencyFilterDBName(startTime time.Time,endTime time.Time,dbName str
 func RdsWriteLatencyFilterDBName(startTime time.Time,endTime time.Time,dbName string) (*cloudwatch.GetMetricStatisticsOutput,error) {
 	return rdsFilerNameComm(startTime,endTime,dbName,"WriteLatency")
 }
+
+func RdsFreeDiskFilterDBName(startTime time.Time,endTime time.Time,dbName string) (*cloudwatch.GetMetricStatisticsOutput,error) {
+	return rdsFilerNameComm(startTime,endTime,dbName,"FreeStorageSpace")
+}
