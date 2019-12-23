@@ -68,3 +68,24 @@ func RdsWriteLatencyFilterDBName(startTime time.Time,endTime time.Time,dbName st
 func RdsFreeDiskFilterDBName(startTime time.Time,endTime time.Time,dbName string) (*cloudwatch.GetMetricStatisticsOutput,error) {
 	return rdsFilerNameComm(startTime,endTime,dbName,"FreeStorageSpace")
 }
+
+func RdsDiskQueueDepthFilterDBName(startTime time.Time,endTime time.Time,dbName string) (*cloudwatch.GetMetricStatisticsOutput,error) {
+	return rdsFilerNameComm(startTime,endTime,dbName,"DiskQueueDepth")
+}
+
+func RdsWriteThroughputFilterDBName(startTime time.Time,endTime time.Time,dbName string) (*cloudwatch.GetMetricStatisticsOutput,error) {
+	return rdsFilerNameComm(startTime,endTime,dbName,"WriteThroughput")
+}
+
+func RdsReadThroughputFilterDBName(startTime time.Time,endTime time.Time,dbName string) (*cloudwatch.GetMetricStatisticsOutput,error) {
+	return rdsFilerNameComm(startTime,endTime,dbName,"ReadThroughput")
+}
+
+func RdsSwapUsageFilterDBName(startTime time.Time,endTime time.Time,dbName string) (*cloudwatch.GetMetricStatisticsOutput,error) {
+	return rdsFilerNameComm(startTime,endTime,dbName,"SwapUsage")
+}
+
+func RdsBinLogDiskUsageFilterDBName(startTime time.Time,endTime time.Time,dbName string) (*cloudwatch.GetMetricStatisticsOutput,error) {
+	return rdsFilerNameComm(startTime,endTime,dbName,"BinLogDiskUsage")
+}
+
